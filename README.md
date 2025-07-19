@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# CHROME EXTENSION FOR TIME TRACKING AND PRODUCTIVITY ANALYTICS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*COMPANY*: CODTECH IT SOLUTIONS
 
-## Available Scripts
+*NAME*: SAKTHIVEL B
 
-In the project directory, you can run:
+*INTERN ID*:CT04DG3151
 
-### `npm start`
+*DOMAIN*:FULL STACK WEB DEVELOPMENT
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*DURATION*: 4 WEEKS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*MENTOR*: NEELA SANTHOSH 
 
-### `npm test`
+Project Title: Chrome Extension for Website Time Tracking and Productivity Analytics
+Project Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project involves developing a Chrome extension that tracks the time spent on various websites by a user, classifies these websites as productive or unproductive, and provides detailed productivity analytics dashboards with weekly reports. The project combines frontend (extension popup, options, and dashboard UI), background scripts for tracking, and a backend server with database integration to store and analyze user data, showcasing advanced skills in full-stack development, browser extension APIs, and data analytics.
 
-### `npm run build`
+Key Functionalities
+Website time tracking:
+The extension uses the Chrome Tabs API and Chrome Alarms API to detect the active tab and track the time spent on each website. It maintains a record of the URL, domain, and duration for every site visited. When users switch tabs or windows, the timer pauses for the previous site and starts for the new one, ensuring accurate tracking even during frequent context switches.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Productive vs Unproductive classification:
+A predefined list of websites is used to classify sites as productive (e.g., coding platforms like LeetCode, HackerRank, GitHub, documentation sites) or unproductive (e.g., social media sites like Instagram, Facebook, YouTube entertainment). Users can customize this classification in the extension options, enabling personalized productivity tracking aligned with their goals.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Backend integration:
+A Node.js backend with Express.js handles API routes for saving and retrieving tracked data. MongoDB is used as the database to store user browsing data securely, with each record containing user ID, website URL, category (productive/unproductive), and time spent. This ensures data persistence and enables analytics generation across days or weeks.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Analytics Dashboard:
+The extension includes a dashboard page accessible via popup or a separate tab. It fetches user data from the backend and displays:
 
-### `npm run eject`
+Total time spent today
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Time spent on productive vs unproductive sites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Pie charts and bar graphs showing category-wise time split
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Daily and weekly productivity trends
+This is implemented using charting libraries like Chart.js or Recharts, ensuring visually clear analytics for user insights.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Weekly productivity reports:
+The backend generates a weekly report summarizing total productive hours, unproductive hours, top visited websites, and suggestions for improvement. This report is accessible on the dashboard, and optionally, email integration can be added to send weekly summaries to the user’s email for accountability and habit tracking.
 
-## Learn More
+User authentication (optional enhancement):
+To personalize data for each user, authentication can be implemented using JWT tokens, allowing multi-user usage when deployed publicly.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Technologies Used
+Frontend: Chrome extension components (manifest.json, popup.html, options.html, background.js), JavaScript, HTML, CSS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Backend: Node.js, Express.js, MongoDB with Mongoose
 
-### Code Splitting
+Charts & UI: Chart.js, Bootstrap or Tailwind CSS for responsive UI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Storage: Chrome Storage API for quick access data; MongoDB for persistent analytics storage
 
-### Analyzing the Bundle Size
+Learning Outcomes
+Mastering Chrome Extension Development:
+Understanding extension architecture – background scripts for long-running tasks, content scripts for page interaction, and popup/options UI for user inputs.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Backend API integration:
+Developing REST APIs using Express.js to handle data saving and fetching efficiently.
 
-### Making a Progressive Web App
+Database design for tracking data:
+Structuring MongoDB schemas to record and query time-tracking data effectively for analytics.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Real-time time tracking logic:
+Implementing tab change listeners and accurate timers that handle user switching, browser inactivity, and idle states.
 
-### Advanced Configuration
+Data visualization:
+Creating readable and professional dashboards with charts to analyze productivity metrics.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Productivity analysis algorithms:
+Developing logic to classify and analyze time spent, detect excessive usage of unproductive sites, and provide actionable recommendations to improve digital habits.
 
-### Deployment
+Full-stack integration:
+Combining frontend extension, backend server, and database into a seamless working application with deployment considerations for production use.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Future Enhancements
+Idle detection: Pausing timers if the user is away from the device for a set duration.
 
-### `npm run build` fails to minify
+Pomodoro reminders: Integrating focus techniques to improve productivity.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Machine Learning suggestions: Recommending website categories based on usage patterns.
+
+Cross-device sync: Enabling tracking across devices via user authentication and cloud storage.
+
+*OUTPUT*
+
