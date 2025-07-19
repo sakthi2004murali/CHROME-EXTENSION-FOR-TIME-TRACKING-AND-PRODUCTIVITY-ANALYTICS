@@ -87,3 +87,4 @@ Cross-device sync: Enabling tracking across devices via user authentication and 
 
 *OUTPUT*
 
+<img width="967" height="1031" alt="Image" src="https://github.com/user-attachments/assets/edd0c213-b77c-4bae-b4cf-3aec84482e13" />
